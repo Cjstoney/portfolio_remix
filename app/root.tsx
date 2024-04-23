@@ -5,7 +5,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import type { LinksFunction } from "@remix-run/node";
 
+import baseStyles from "./styles/index.css?url";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: baseStyles },
+];
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
