@@ -1,0 +1,31 @@
+.visual-line {
+  color: var(--line-color);
+  width: 75%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.section-header-text {
+  font-size: 1.5rem;
+  font-family: var(--default-font);
+  display: block;
+  grid-row: 1;
+  margin: 0;
+  color: var(--header-color);
+}
+
+.section-header-container {
+  display: flex;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+.job-accent {
+  color: var(--accent-color);
+}
+
+.employment-time {
+  color: var(--header-color);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
