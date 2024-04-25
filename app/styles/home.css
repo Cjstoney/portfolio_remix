@@ -1,0 +1,20 @@
+.homePage {
+  display: grid;
+  align-self: center;
+  width: 100%;
+  background-color: #121431;
+  padding-bottom: 100px;
+}
+
+.aboutIntro {
+  font-size: 3rem;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
+.about-content,
+.about-me-container,
+.experience-container,
+.portfolio-container {
+  margin-top: 1.5rem;
+}
