@@ -1,0 +1,144 @@
+.about-content {
+  margin-top: 5rem;
+  display: grid;
+  font-size: 1rem;
+  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+  grid-template-rows: auto auto auto;
+  max-height: 100%;
+  width: 100vw;
+}
+
+.introduction,
+.small-text-container {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+.emailLink,
+.emailLink:hover {
+  align-self: start;
+  align-items: center;
+  color: var(--accent-color);
+  display: grid;
+  font-family: var(--accent-font);
+  grid-row: 3;
+  grid-column-start: 2;
+  height: 2rem;
+  justify-content: center;
+  justify-self: start;
+  margin-top: 3rem;
+  padding: 5px 11px;
+  text-decoration: none;
+  width: fit-content;
+}
+.emailLink:hover {
+  border: 2px solid var(--accent-color);
+}
+.emailLink {
+  border: 1px solid var(--accent-color);
+}
+
+.introduction {
+  align-self: center;
+  grid-row: 1;
+  justify-self: start;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.small-text-container {
+  font-family: var(--accent-font);
+  grid-row: 2;
+}
+.introduction-text {
+  margin-left: 2rem;
+  margin-top: 0;
+  font-size: 1rem;
+}
+.arrow-icon {
+  transform: rotate(45deg);
+}
+
+.text-accent-color,
+.name {
+  color: var(--accent-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .about-content {
+    margin-top: 5rem;
+    display: grid;
+    font-size: 1rem;
+    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-rows: auto auto auto;
+    max-height: 100%;
+    width: 100vw;
+  }
+
+  .emailLink,
+  .emailLink:hover {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    align-self: center;
+    font-size: 0.75rem;
+    height: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .introduction,
+  .small-text-container {
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+
+  .introduction {
+    align-self: center;
+    grid-row: 1;
+    justify-self: start;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .small-text-container {
+    font-family: var(--accent-font);
+    grid-row: 2;
+  }
+  .introduction-text {
+    margin-left: 2rem;
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  .arrow-icon {
+    transform: rotate(45deg);
+  }
+  .picture {
+    background: none;
+    display: block;
+    filter: grayscale(25%);
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    grid-row: 3;
+    justify-self: end;
+    margin-top: 1rem;
+    position: relative;
+    width: 11.5rem;
+    z-index: 5;
+  }
+  .picture::after {
+    border: 1px solid var(--accent-color);
+    box-sizing: inherit;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 1rem;
+    top: 0.5rem;
+    position: absolute;
+    width: 100%;
+    visibility: visible;
+    z-index: -1;
+  }
+  .self-image {
+    max-width: 100%;
+  }
+  #desktop-only {
+    display: none;
+  }
+}

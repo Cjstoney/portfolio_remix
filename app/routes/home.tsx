@@ -1,7 +1,10 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/node";
 import { Outlet } from "@remix-run/react";
+
+import IntroductionComponent from "../components/introduction";
 import homeStyles from "../styles/home.css?url";
 import headerStyles from "../styles/header.css?url";
+import IntroStyles from "../styles/introduction.css?url";
 
 export const meta: MetaFunction = () => {
   return [
@@ -18,6 +21,10 @@ export const links: LinksFunction = () => [
   {
     rel: "stylesheet",
     href: headerStyles,
+  },
+  {
+    rel: "stylesheet",
+    href: IntroStyles,
   },
 ];
 
@@ -42,8 +49,8 @@ export default function Home() {
         </div>
       </header>
       <Outlet />
-      {/*<IntroductionComponent className="about-content" />
-    <AboutMeComponent className="about-me-container" />
+      <IntroductionComponent className="about-content" />
+      {/*<AboutMeComponent className="about-me-container" />
     <ExperienceComponent className="experience-container" />
   <PortfolioSectionComponent className="portfolio-container" />  */}
     </>
