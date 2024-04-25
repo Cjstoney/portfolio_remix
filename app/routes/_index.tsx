@@ -1,11 +1,13 @@
-import type { MetaFunction, LinksFunction } from "@remix-run/node";
-import { Outlet } from "@remix-run/react";
+import type { MetaFunction, LinksFunction, json } from "@remix-run/node";
 
 //components
-import IntroductionComponent from "../components/introduction";
 import LogoComponent from "../components/logo";
 import SectionHeader from "../components/sectionHeader";
-import AboutMeComponent from "../components/aboutMe";
+import PortfolioCard from "../components/portfolioCard";
+
+//data
+import Jobs from "../data/jobs.json";
+import cards from "../data/cards.json";
 
 //styles
 import homeStyles from "../styles/home.css?url";
@@ -13,6 +15,9 @@ import headerStyles from "../styles/header.css?url";
 import IntroStyles from "../styles/introduction.css?url";
 import SectionHeaderStyle from "../styles/sectionHeader.css?url";
 import AboutStyles from "../styles/aboutMe.css?url";
+import ExperienceStyles from "../styles/experience.css?url";
+import PortfolioCardStyles from "../styles/portfolioCard.css?url";
+import PortfolioSectionStyles from "../styles/portfolioSection.css?url";
 
 export const meta: MetaFunction = () => {
   return [
@@ -42,29 +47,42 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: AboutStyles,
   },
+  {
+    rel: "stylesheet",
+    href: ExperienceStyles,
+  },
+  {
+    rel: "stylesheet",
+    href: PortfolioCardStyles,
+  },
+  {
+    rel: "stylesheet",
+    href: PortfolioSectionStyles,
+  },
 ];
 
 export default function Home() {
+  const sections = [
+    { text: "Introduction", id: "introduction" },
+    { text: "About", id: "aboutMe" },
+    { text: "Experience", id: "experience" },
+    { text: "Portfolio", id: "portfolio" },
+  ];
+
   return (
     <div className="homePage">
       <header className="header-container" id="myHeader">
         <LogoComponent className="logo-container" />
         <div className="header-link-container">
-          <a href="#introductionSection" className="header-link">
-            Introduction
-          </a>
-          <a href="#aboutMeSection" className="header-link">
-            About
-          </a>
-          <a href="#experienceSection" className="header-link">
-            Experience
-          </a>
-          <a href="#portfolioSection" className="header-link">
-            Portfolio
-          </a>
+          {sections.map((el, ind) => {
+            return (
+              <a href={`#${el.id}Section`} className="header-link" key={ind}>
+                {el.text}
+              </a>
+            );
+          })}
         </div>
       </header>
-      <Outlet />
       <div className="about-content" id="introductionSection">
         <h1 className="introduction">
           Hello. <br />I am <span className="name">Camerone</span>
@@ -106,8 +124,39 @@ export default function Home() {
           />
         </picture>
       </div>
-      {/*<ExperienceComponent className="experience-container" />
-  <PortfolioSectionComponent className="portfolio-container" />  */}
+      <div className="experience-container" id="experienceSection">
+        <SectionHeader className="experience-header" headerText="Experience" />
+        <ul className="experience-list">
+          {Jobs.map((job, index) => {
+            return (
+              <li key={index} className="individual-job-container">
+                <div className="job-title">
+                  {job.title}{" "}
+                  <span className="job-accent">@ {job.company}</span>
+                </div>
+                <div className="employment-time">
+                  {job.startDate} - {job.endDate}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      {/*<PortfolioSectionComponent className="portfolio-container" />  */}
+      <div className="portfolio-container" id="portfolioSection">
+        <SectionHeader className="portfolio-header" headerText="Projects" />
+        <div className="cards-container">
+          {cards.reverse().map((card, index) => {
+            return (
+              <PortfolioCard
+                className="portfolio-card"
+                key={index}
+                card={card}
+              />
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "6",
+    "projName": "Just Networking",
+    "URL": "https://www.just-networking.com/",
+    "ghURL": "https://www.just-networking.com/",
+    "image": "images/just-networking-zoomed-in.png",
+    "mockup": "images/justNetworkingMockup.png",
+    "description": "A Hardware VPN With Infinite Possibilities to Extend Your Production Workflow.",
+    "technologies": [
+      {
+        "technology": "Angular",
+        "techImage": "images/technologies/iconfinder_21_Angular_logo_logos_4373871.png"
+      },
+      {
+        "technology": "HTML5",
+        "techImage": "images/technologies/iconfinder_HTML5_367627.png"
+      },
+      {
+        "technology": "CSS3",
+        "techImage": "images/technologies/iconfinder_css3_4691518.png"
+      },
+      {
+        "technology": "Typescript",
+        "techImage": "images/technologies/icons8-typescript-50.png"
+      },
+      {
+        "technology": "NodeJs",
+        "techImage": "images/technologies/iconfinder_nodejs-512_339733.png"
+      },
+      {
+        "technology": "GraphQL",
+        "techImage": "images/technologies/iconfinder_graphql_4691403.png"
+      },
+      {
+        "technology": "NestJS",
+        "techImage": "images/technologies/logo-small.ede75a6b.png"
+      },
+      {
+        "technology": "MongoDb",
+        "techImage": "images/technologies/iconfinder_mongodb_4691284.png"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "projName": "VS Code Shortcut Helper",
+    "URL": "https://fervent-goodall-9e056d.netlify.app/",
+    "ghURL": "https://github.com/Cjstoney/shortcuts",
+    "image": "images/shortcut.png",
+    "mockup": "images/shortcutsMockup.png",
+    "description": "A quick reference guide for anyone using VS Code created using Angular, and Typescript.",
+    "technologies": [
+      {
+        "technology": "Angular",
+        "techImage": "images/technologies/iconfinder_21_Angular_logo_logos_4373871.png"
+      },
+      {
+        "technology": "HTML5",
+        "techImage": "images/technologies/iconfinder_HTML5_367627.png"
+      },
+      {
+        "technology": "CSS3",
+        "techImage": "images/technologies/iconfinder_css3_4691518.png"
+      },
+      {
+        "technology": "Typescript",
+        "techImage": "images/technologies/icons8-typescript-50.png"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "projName": "Portfolio",
+    "URL": "https://www.cameronestoney.com",
+    "ghURL": "https://github.com/Cjstoney/portfolio_react",
+    "description": "Portfolio website for Camerone Stoney",
+    "technologies": [
+      {
+        "technology": "React"
+      },
+      {
+        "technology": "HTML5"
+      },
+      {
+        "technology": "CSS3"
+      },
+      {
+        "technology": "Javascript"
+      }
+    ]
+  }
+]

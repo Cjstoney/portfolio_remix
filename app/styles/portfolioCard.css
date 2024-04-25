@@ -1,0 +1,47 @@
+.portfolio-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  padding: 1rem;
+}
+
+.folder-icon,
+.gh-outline {
+  grid-row: 1;
+}
+.gh-outline {
+  grid-column: 3;
+  justify-self: end;
+}
+
+.folder-icon {
+  justify-self: start;
+}
+.proj-title {
+  grid-row: 2;
+  grid-column: span 3;
+  font-family: var(--default-font);
+  color: var(--header-color);
+}
+div.proj-description {
+  font-family: var(--accent-font);
+  font-size: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.proj-tech {
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  padding-bottom: 0.5rem;
+}
+
+.individual-tech {
+  align-self: end;
+  color: #bebebe;
+  font-family: var(--accent-font);
+  font-size: 0.7rem;
+  justify-self: start;
+}

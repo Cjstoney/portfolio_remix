@@ -1,0 +1,35 @@
+.experience-container {
+  display: grid;
+  font-size: 1rem;
+  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+  max-height: 100%;
+  width: 100vw;
+}
+.experience-header,
+.experience-list {
+  margin-left: 15%;
+  grid-column-start: 2;
+  grid-column-end: span 3;
+}
+.experience-header {
+  font-family: var(--default-font);
+}
+
+.experience-list {
+  grid-row-start: 2;
+  grid-column-end: span 3;
+  padding: 0;
+  list-style: none;
+  font-family: var(--accent-font);
+}
+
+.individual-job-container {
+  margin-top: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .experience-container {
+    grid-template-rows: 5rem auto;
+  }
+}
